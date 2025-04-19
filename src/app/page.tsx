@@ -6,7 +6,7 @@ import Brands from "@/components/homepage/Brands";
 import Header from "@/components/homepage/Header";
 // import Reviews from "@/components/homepage/Reviews";
 import { Product } from "@/types/product.types";
-import { Review } from "@/types/review.types";
+// import { Review } from "@/types/review.types";
 
 export default function Home() {
   const [newArrivals, setNewArrivals] = useState<Product[]>([]);
@@ -73,7 +73,6 @@ export default function Home() {
           />
         </div>
         <div className="mb-[50px] sm:mb-20">{/* <DressStyle /> */}</div>
-        {/* <Reviews data={reviewsData} /> */}
       </main>
     </>
   );

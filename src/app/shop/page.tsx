@@ -30,14 +30,14 @@ import React, { useEffect, useState } from "react";
 export default function ShopPage() {
   const [products, setProducts] = useState<any[]>([]);
 
-  useEffect(() => {
-    // This will ensure slice is run on the client side
-    setProducts([
-      ...relatedProductData.slice(1, 4),
-      ...newArrivalsData.slice(1, 4),
-      ...topSellingData.slice(1, 4),
-    ]);
-  }, []); // Empty dependency array ensures this runs only once when the component mounts
+  //   useEffect(() => {
+  //     // This will ensure slice is run on the client side
+  //     setProducts([
+  //       ...relatedProductData.slice(1, 4),
+  //       ...newArrivalsData.slice(1, 4),
+  //       ...topSellingData.slice(1, 4),
+  //     ]);
+  //   }, []); // Empty dependency array ensures this runs only once when the component mounts
 
   return (
     <main className="pb-20">
