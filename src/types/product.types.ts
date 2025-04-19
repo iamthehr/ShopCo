@@ -4,7 +4,7 @@ export type Discount = {
 };
 
 export type Product = {
-  _id: string; 
+  _id: number; 
   title: string;
   description: string;
   price: number;
