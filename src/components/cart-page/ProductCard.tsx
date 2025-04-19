@@ -52,7 +52,7 @@ const ProductCard = ({ data }: ProductCardProps) => {
             onClick={() =>
               dispatch(
                 remove({
-                  id: data.id,
+                  id: parseInt(data.id, 16),
                   attributes: data.attributes,
                   quantity: data.quantity,
                 })
@@ -87,13 +87,16 @@ const ProductCard = ({ data }: ProductCardProps) => {
               data.quantity === 1
                 ? dispatch(
                     remove({
-                      id: data.id,
+                      id: parseInt(data.id, 16),
                       attributes: data.attributes,
                       quantity: data.quantity,
                     })
                   )
                 : dispatch(
-                    removeCartItem({ id: data.id, attributes: data.attributes })
+                    removeCartItem({
+                      id: parseInt(data.id, 16),
+                      attributes: data.attributes,
+                    })
                   )
             }
             isZeroDelete
